@@ -200,8 +200,40 @@ input[type="range"]::-webkit-slider-thumb {
     background: #ccc;
 }
 
+@media (max-width: 1100px) {
+  .grid-container {
+    overflow-y: scroll;
+    padding: 20px;
+  }
+  
+}
+
 @media (max-width: 900px) {
   .options {
     flex-direction: column;
+    height: 900px;
+  }
+  .waveform-container {
+    width: 100%;
+  }
+  .waveform-options {
+    width: 80%;
+    margin: 0 auto;
+    height: 350px;
+    padding: 20px;
+    padding-bottom: 40px;
+    align-items: center;
+  }
+
+  .envelope-container {
+    height: 150px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .envelope {
+    margin: 0 auto;
+    width: 80%;
   }
 }
+

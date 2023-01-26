@@ -8,6 +8,10 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
+body {
+    background-color: rgb(27, 27, 27);
+}
+
 html {
     overflow-x: hidden;
 }
@@ -15,4 +19,10 @@ html {
 h2 {
     font-size: 30px;
     font-weight: 700;
+}
+
+@media (max-width: 1400px) {
+    body {
+        padding-bottom: 100px;
+    }
 }
