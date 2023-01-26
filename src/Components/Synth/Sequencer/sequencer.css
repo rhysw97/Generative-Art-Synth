@@ -16,6 +16,7 @@
   padding: 20px 60px;
   border-radius: 60px;
   box-shadow: 0 9px 10px rgb(0, 0, 0);
+  cursor: pointer;
 }
 
 .sequencer-buttons p:hover  {

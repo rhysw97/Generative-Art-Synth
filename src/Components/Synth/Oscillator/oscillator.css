@@ -23,6 +23,7 @@
 
   .drone-buttons p:hover  {
     box-shadow: inset 0 3px 5px #000000;
+    cursor: pointer;
   }
   
   .drone-buttons p:active  {
@@ -91,6 +92,10 @@ p {
   margin: 0;
   flex-basis: 0;
   visibility: hidden;
+}
+
+.wave label {
+  cursor: pointer;
 }
 
 .wave input[type="radio"]:checked + label.background-shape{
