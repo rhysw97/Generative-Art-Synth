@@ -200,3 +200,8 @@ input[type="range"]::-webkit-slider-thumb {
     background: #ccc;
 }
 
+@media (max-width: 900px) {
+  .options {
+    flex-direction: column;
+  }
+}
