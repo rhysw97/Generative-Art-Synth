@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/generative-sound-art/static/css/main.0e890c4b.css",
+    "main.js": "/generative-sound-art/static/js/main.3c6a6af0.js",
+    "static/js/787.72f505ce.chunk.js": "/generative-sound-art/static/js/787.72f505ce.chunk.js",
+    "index.html": "/generative-sound-art/index.html",
+    "main.0e890c4b.css.map": "/generative-sound-art/static/css/main.0e890c4b.css.map",
+    "main.3c6a6af0.js.map": "/generative-sound-art/static/js/main.3c6a6af0.js.map",
+    "787.72f505ce.chunk.js.map": "/generative-sound-art/static/js/787.72f505ce.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e890c4b.css",
+    "static/js/main.3c6a6af0.js"
+  ]
+}

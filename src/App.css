@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+  background-color: rgb(27, 27, 27);
+  color: rgb(225, 225, 225);
+}
+
+.open-modal {
+  width: 150px;
+  background-color:rgb(182, 11, 182);
+  padding: 20px 0;
+  border-radius: 60px;
+  box-shadow: 0 9px 10px rgb(0, 0, 0);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+}
+
+.open-modal:hover {
+  box-shadow: inset 0 3px 5px #000000;
+}
+
+.open-modal:active {
+  background-color:rgba(182, 11, 182, 0.56);
+}

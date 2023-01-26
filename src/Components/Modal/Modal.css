@@ -1,0 +1,39 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.678);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modal-content {
+    width: 1000px;
+    background-color: rgb(44, 44, 44);
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+p {
+    
+}
+.modal-header, .modal-footer {
+    padding: 10px;
+}
+
+.modal-title {
+    margin: 0;
+}
+
+.modal-body {
+    padding: 10px;
+
+}

@@ -1,0 +1,12 @@
+Sequencer
+
+what I need to do:
+
+1. Update UI
+2. make sketch interactive
+3. add instructions
+4. Fix Sequencer
+
+5. Film documentation
+6. edit documentation
+7.add comments

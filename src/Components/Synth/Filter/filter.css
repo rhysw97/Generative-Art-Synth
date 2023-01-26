@@ -1,0 +1,43 @@
+.filter {
+   display: flex;
+   justify-content: space-between;
+   height: 200px;
+}
+
+.filter div {
+    flex-basis: 50%;
+}
+
+.filter-selection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter-option {
+    flex-basis: 50%;
+    padding-top: 40px;
+}
+
+
+
+
+.filter-sliders-container {
+ display: flex;
+ flex-direction: column;
+ gap: 40px;
+ align-items: center;
+}
+
+.filter-sliders-container h2 {
+    text-align: center;
+}
+
+.cutoff {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+input[type='radio'] {
+    
+}
