@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Generative-Art-Synth/static/css/main.b93910d5.css",
-    "main.js": "/Generative-Art-Synth/static/js/main.fbe1e3a0.js",
+    "main.css": "/Generative-Art-Synth/static/css/main.77b986e5.css",
+    "main.js": "/Generative-Art-Synth/static/js/main.d46d3a50.js",
     "static/js/787.72f505ce.chunk.js": "/Generative-Art-Synth/static/js/787.72f505ce.chunk.js",
     "index.html": "/Generative-Art-Synth/index.html",
-    "main.b93910d5.css.map": "/Generative-Art-Synth/static/css/main.b93910d5.css.map",
-    "main.fbe1e3a0.js.map": "/Generative-Art-Synth/static/js/main.fbe1e3a0.js.map",
+    "main.77b986e5.css.map": "/Generative-Art-Synth/static/css/main.77b986e5.css.map",
+    "main.d46d3a50.js.map": "/Generative-Art-Synth/static/js/main.d46d3a50.js.map",
     "787.72f505ce.chunk.js.map": "/Generative-Art-Synth/static/js/787.72f505ce.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b93910d5.css",
-    "static/js/main.fbe1e3a0.js"
+    "static/css/main.77b986e5.css",
+    "static/js/main.d46d3a50.js"
   ]
 }
