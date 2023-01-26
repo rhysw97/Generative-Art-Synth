@@ -16,9 +16,9 @@ for(let i = 0; i < 5; i++) {
 
   newSynth.set( {
     envelope: {
-      attack: 0.2,
-      decay: 0.4,
-      release: 0.4
+      attack: 0.1,
+      decay: 0.1,
+      release: 0.1
     }
   })
   sequencerSynths.push(newSynth);
@@ -30,13 +30,14 @@ function App() {
   const [modalActive, setModalActive] = useState(false);
   return (
     <div className="App">
+      
       <p className="open-modal" onClick={() => setModalActive(true)}>Instructions</p>
       <Modal show={modalActive} close={()=> setModalActive(false)}/>
       <>
         <ReactP5Wrapper sketch={sketch} />
       </>
-      <Oscillator></Oscillator>
       <Sequencer sequenceLength={16} notes={["C4", "D4", "E4", "G4", "C5"]}/>
+      <Oscillator></Oscillator>
     </div>
   );
 }

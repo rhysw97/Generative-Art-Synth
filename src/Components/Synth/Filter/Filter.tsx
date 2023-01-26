@@ -1,6 +1,6 @@
 import * as Tone from "tone"
 import { SynthContext, SequencerSynthsContext } from '../../../App';
-import {useContext, useState} from 'react'
+import React, {useContext, useState} from 'react'
 import './filter.css'
 
 export default function Filter(props: any) {
@@ -38,6 +38,10 @@ export default function Filter(props: any) {
         setSelectedFilterType(event?.currentTarget.value)
         setFilterType(selectedFilterType)
     }
+
+    const setGain = (event: React.ChangeEvent<HTMLInputElement>) => {
+        oscFilter.set({gain: parseInt(event.target.value)})
+    }
     
     return(
         <div className="filter">
@@ -63,11 +67,17 @@ export default function Filter(props: any) {
                 </div>            
             </div>
 
-            <div className="filter-sliders-container">
+            <div className="filter-container">
                 <h2>Filter Settings</h2>
-                <div className="cutoff">
-                    <input onChange={setCutOff} type="range" min="0" max="25000" step="1" ></input>
-                    <label>CutOff</label>
+                <div className="filter-controls">
+                    <div className="cutoff">
+                        <input onChange={setCutOff} type="range" className='vertical' min="0" max="25000" step="1" ></input>
+                        <label>CutOff</label>
+                    </div>
+                    <div className="filter-gain">
+                        <input onChange={setGain} type="range" className='vertical' min="-25" max="30" step="1" ></input>
+                        <label>Gain</label>
+                    </div>
                 </div>
             </div>
         </div>

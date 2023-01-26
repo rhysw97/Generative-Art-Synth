@@ -25,6 +25,13 @@ export default function Sequencer(props: SequencerProps) {
         setSequence(grid)
         currentStep.current = 0;
     },[])
+
+    const changeGain = (event: React.ChangeEvent<HTMLInputElement>) => {
+        sequencerSynths.forEach(synth => {
+            console.log(synth.get())
+            synth.set({volume: parseInt(event.target.value)})
+        })
+    }
     
     const repeat = (time: any) => {
         let step = currentStep.current % props.sequenceLength
@@ -32,7 +39,7 @@ export default function Sequencer(props: SequencerProps) {
             let synth = sequencerSynths[i];
             let note = props.notes[i];
             let row: any[] = sequence[i]
-            console.log(row[step].active)
+
             if(row[step].active) {
                 synth.triggerAttackRelease(note, '16n', time)
             }
@@ -44,13 +51,19 @@ export default function Sequencer(props: SequencerProps) {
         <div className="sequencer">
             <h2>Sequencer</h2>
             <div className="sequencer-controls">
-                <p id="playButton" onClick={() => {
-                    Tone.start();
-                    Tone.Transport.start()
-                    Tone.Transport.bpm.value = 80;
-                    Tone.Transport.scheduleRepeat(repeat, '16n')
-                }}>play</p>
-                <p id="stopButton" onClick={() => Tone.Transport.stop()}>stop</p>
+                <div className='sequencer-buttons'>
+                    <p id="playButton" onClick={() => {
+                        Tone.start();
+                        Tone.Transport.start()
+                        Tone.Transport.bpm.value = 80;
+                        Tone.Transport.scheduleRepeat(repeat, '16n')
+                    }}>Play</p>
+                    <p id="stopButton" onClick={() => Tone.Transport.stop()}>Stop</p>
+                </div>
+                <div className="gain">
+                    <label>Gain</label>
+                    <input  type="range" min="-25" max="30" step="1"  onChange={changeGain}></input>
+                </div>
             </div>
 
             <div className="grid-container">

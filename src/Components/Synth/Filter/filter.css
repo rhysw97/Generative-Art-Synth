@@ -1,7 +1,7 @@
 .filter {
    display: flex;
    justify-content: space-between;
-   height: 200px;
+   height: 350px;
 }
 
 .filter div {
@@ -11,33 +11,60 @@
 .filter-selection {
     display: flex;
     flex-wrap: wrap;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .filter-option {
-    flex-basis: 50%;
-    padding-top: 40px;
+    flex-basis: 40%;
+    padding: 60px 0;
+}
+
+.filter-option label {
+    padding-left: 10px;
+    font-size: 20px;
 }
 
 
-
-
-.filter-sliders-container {
- display: flex;
- flex-direction: column;
- gap: 40px;
- align-items: center;
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
 }
 
-.filter-sliders-container h2 {
+.filter-container h2 {
     text-align: center;
 }
 
-.cutoff {
+.filter-controls {
     display: flex;
-    flex-direction: column;
-    gap: 40px;
+    align-items: center;
 }
 
-input[type='radio'] {
-    
+.filter-controls div {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.filter-controls label {
+    font-size: 20px;
+}
+
+@media (max-width: 780px) {
+    .filter-selection {
+        width: 100%;
+    }
+}
+
+@media (max-width: 460px) {
+    .filter-selection {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .filter-option {
+        padding: 20px;
+    }
 }

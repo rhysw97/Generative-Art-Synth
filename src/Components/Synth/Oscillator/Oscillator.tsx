@@ -28,6 +28,10 @@ export default function Oscillator(props: any) {
         synth.triggerRelease(["C4", "E4", "A4"])
     }
 
+    const setGain = (event: React.ChangeEvent<HTMLInputElement>) => {
+        synth.set({volume: parseInt(event.target.value)})
+    }
+
     const setWave = (value : string) => {
         console.log(value)
         switch(value) {
@@ -98,9 +102,15 @@ export default function Oscillator(props: any) {
         <div>
             <div className="drone-controls">
                 <h2>Drone Controls</h2>
-                <div className="drone-buttons">
-                    <p onClick={playSound}>Play</p>
-                    <p onClick={stopSound}>Stop</p>
+                <div className="controls-container">
+                    <div className="drone-buttons">
+                        <p onClick={playSound}>Play</p>
+                        <p onClick={stopSound}>Stop</p>
+                    </div>
+                    <div className="gain">
+                        <label>Gain</label>
+                        <input onChange={setGain} type="range" min="-25" max="30" step="1"></input>
+                    </div>
                 </div>
             </div>
             
@@ -109,28 +119,28 @@ export default function Oscillator(props: any) {
                     <h2>Select Waveform</h2>
                     <form className='waveform-options'>
                         <div>
-                            <h3>Sine</h3>
+                            <p>Sine</p>
                             <div className="wave">
                                 <input type="radio" id="sine" name="waveform" value="sine" checked={isWaveformSelected("sine")} onChange={handleRadioClick}/>
                                 <label htmlFor='sine' className="sine-shape background-shape"></label>
                             </div>
                         </div>
                         <div>
-                            <h3>Triangle</h3>
+                            <p>Triangle</p>
                             <div className="wave">
                                 <input type="radio" id="triangle" name="waveform" value="triangle" checked={isWaveformSelected("triangle")} onChange={handleRadioClick}/>
                                 <label htmlFor='triangle' className="triangle-shape border-shape"></label>
                             </div>
                         </div>
                         <div>
-                            <h3>Square</h3>
+                            <p>Square</p>
                             <div className="wave">
                                 <input type="radio" id="square" name="waveform" value="square" checked={isWaveformSelected("square")} onChange={handleRadioClick}/>
                                 <label htmlFor='square' className="square-shape background-shape"></label>
                             </div>
                         </div>
                         <div>
-                            <h3>Sawtooth</h3>
+                            <p>Sawtooth</p>
                             <div className="wave">
                                 <input type="radio" id="sawtooth" name="waveform" value="sawtooth" checked={isWaveformSelected('sawtooth')} onChange={handleRadioClick}/>
                                 <label htmlFor='sawtooth' className="sawtooth-shape border-shape"></label>
@@ -142,19 +152,19 @@ export default function Oscillator(props: any) {
                     <h2>ADSR Envelope</h2>
                     <form className="envelope">
                         <div>
-                            <input onChange={setAttack} type="range" ></input>
+                            <input onChange={setAttack} type="range" className='vertical' ></input>
                             <label>Attack</label>
                         </div>
                         <div>
-                            <input onChange={setDecay} type="range"></input>
+                            <input onChange={setDecay} type="range" className='vertical'></input>
                             <label>Decay</label>
                         </div>
                         <div>
-                            <input onChange={setSustain} type="range" min='0' max='1' step='0.001'></input>
+                            <input onChange={setSustain} type="range" className='vertical' min='0' max='1' step='0.001'></input>
                             <label>Sustain</label>
                         </div>
                         <div>
-                            <input onChange={setRelease} type="range" min='0' max="30" step='0.01'></input>
+                            <input onChange={setRelease} type="range" className='vertical' min='0' max="30" step='0.01'></input>
                             <label>Release</label>
                         </div>
                     </form>
