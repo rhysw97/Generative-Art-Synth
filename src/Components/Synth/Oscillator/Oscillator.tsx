@@ -4,7 +4,7 @@ import * as Tone from 'tone';
 import './oscillator.css'
 import { SynthContext, SequencerSynthsContext } from '../../../App';
 import Filter from '../Filter/Filter'
-import { ConstructionOutlined } from '@mui/icons-material';
+
 
 
 export default function Oscillator(props: any) {
