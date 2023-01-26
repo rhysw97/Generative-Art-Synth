@@ -23,6 +23,7 @@ export default function Modal(props: ModalProps) {
                     <p>This is a synth that produces generative art based on the waveforms of the Oscillator</p>
                     <p>To get started please press play in either the drone controls or the sequencer controls</p>
                     <p>Please note you will have to click on some of the buttons within the sequencer so that they are active (purple)</p>
+                    <p>Also try pressing R when looking at the art</p>
                 </div>
                 <div className="modal-footer">
                     <p className="close-button" onClick={props.close}>Close</p>
