@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Generative-Art-Synth/static/css/main.1cfd331a.css",
+    "main.js": "/Generative-Art-Synth/static/js/main.2e78589f.js",
+    "static/js/787.72f505ce.chunk.js": "/Generative-Art-Synth/static/js/787.72f505ce.chunk.js",
+    "index.html": "/Generative-Art-Synth/index.html",
+    "main.1cfd331a.css.map": "/Generative-Art-Synth/static/css/main.1cfd331a.css.map",
+    "main.2e78589f.js.map": "/Generative-Art-Synth/static/js/main.2e78589f.js.map",
+    "787.72f505ce.chunk.js.map": "/Generative-Art-Synth/static/js/787.72f505ce.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1cfd331a.css",
+    "static/js/main.2e78589f.js"
+  ]
+}

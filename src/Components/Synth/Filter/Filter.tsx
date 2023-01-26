@@ -39,32 +39,34 @@ export default function Filter(props: any) {
         setFilterType(selectedFilterType)
     }
 
-    const setGain = (event: React.ChangeEvent<HTMLInputElement>) => {
-        oscFilter.set({gain: parseInt(event.target.value)})
+    const setDetune = (event: React.ChangeEvent<HTMLInputElement>) => {
+        oscFilter.set({detune: parseInt(event.target.value)})
+        console.log(oscFilter.get())
     }
     
     return(
         <div className="filter">
             <div className="filter-options-container">
                 <h2>Select Filter</h2>
-                <div className='filter-selection'>
-                    <div className="filter-option">
+
+                <div className="filter-selection">
+                    <label className="filter-option">
                         <input type="radio" id="lowpass" name="filter-type" value="lowpass" checked={isFilterTypeSelected("lowpass")} onChange={handleRadioClick}/>
-                        <label htmlFor='lowpass' >Lowpass</label>
-                    </div>
-                    <div className="filter-option">
+                        <span>Lowpass</span>
+                    </label>
+                    <label className="filter-option">
                         <input type="radio" id="highpass" name="filter-type" value="highpass" checked={isFilterTypeSelected("highpass")} onChange={handleRadioClick}/>
-                        <label htmlFor='highpass'>Highpass</label>
-                    </div>
-                    <div className="filter-option">
+                        <span>Highpass</span>
+                    </label>
+                    <label className="filter-option">
                         <input type="radio" id="lowshelf" name="filter-type" value="lowshelf" checked={isFilterTypeSelected("lowshelf")} onChange={handleRadioClick}/>
-                        <label htmlFor='lowshelf'>Lowshelf</label>
-                    </div>
-                    <div className="filter-option">
+                        <span>Lowshelf</span>
+                    </label>
+                    <label className="filter-option">
                         <input type="radio" id="highshelf" name="filter-type" value="highshelf" checked={isFilterTypeSelected("highshelf")} onChange={handleRadioClick}/>
-                        <label htmlFor='highshelf'>Highshelf</label>
-                    </div>
-                </div>            
+                        <span>Highshelf</span>
+                    </label>
+                </div>        
             </div>
 
             <div className="filter-container">
@@ -74,9 +76,9 @@ export default function Filter(props: any) {
                         <input onChange={setCutOff} type="range" className='vertical' min="0" max="25000" step="1" ></input>
                         <label>CutOff</label>
                     </div>
-                    <div className="filter-gain">
-                        <input onChange={setGain} type="range" className='vertical' min="-25" max="30" step="1" ></input>
-                        <label>Gain</label>
+                    <div className="filter-detune">
+                        <input onChange={setDetune} type="range" className='vertical' min="-25" max="100" step="1" ></input>
+                        <label>Detune</label>
                     </div>
                 </div>
             </div>

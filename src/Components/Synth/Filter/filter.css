@@ -18,12 +18,52 @@
 .filter-option {
     flex-basis: 40%;
     padding: 60px 0;
+    cursor: pointer;
 }
 
-.filter-option label {
+.filter-option span {
     padding-left: 10px;
     font-size: 20px;
+    position: relative;
 }
+
+.filter-option span:before,
+.filter-option span:after {
+  content: '';
+}
+
+.filter-option input {
+    width: 0;
+    height: 0;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    flex-basis: 0;
+    visibility: hidden;
+}
+
+.filter-option span:before {
+    border: 1px solid rgb(182, 11, 182);
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .filter-option span:after {
+    background: rgb(182, 11, 182);
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    bottom: 8px;
+    left: 13px;
+    opacity: 0;
+  }
+
+  label input:checked+span:after {
+    opacity: 1;
+  }
 
 
 .filter-container {
@@ -52,13 +92,23 @@
     font-size: 20px;
 }
 
-@media (max-width: 780px) {
+@media (max-width: 1100px) {
     .filter-selection {
-        width: 100%;
+        width: 90%;
     }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 630px) {
+    .filter-selection {
+        flex-direction: column;
+    }
+
+    .filter-option {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 650px) {
     .filter-selection {
         flex-direction: column;
         width: 100%;
